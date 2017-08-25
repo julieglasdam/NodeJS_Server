@@ -17,5 +17,5 @@
     "url": "https://github.com/julieglasdam/nodeTest/issues"
   },
   "homepage": "https://github.com/julieglasdam/nodeTest#readme", 
-  "node-server" : {"node" : "0.12.x"}
+  "engines" : {"node" : "0.12.x"}
 }

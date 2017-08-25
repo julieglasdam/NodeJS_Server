@@ -10,4 +10,4 @@ var server = http.createServer(function(req, res){ // new function inside create
 });
 
 // Listen on port number
-server.listen(3003);
+server.listen(process.env.PORT || 3003);
