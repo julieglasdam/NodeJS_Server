@@ -6,13 +6,14 @@ var server = http.createServer(function(req, res){ // new function inside create
    	// First parameter is status code, second parameter is type of content
    	res.writeHead(200, {'Content-type' : 'text/json'}); 
 
-var fs = require('fs');
-var text = fs.readFile('small.txt', 'utf-8', function (err, data) {
-	
-});
+  var fs = require('fs');
+  var x;
+  fs.readFile('small.txt', 'utf-8', function (err, data) {
+   x = data;
+  });
 
     res.write('<h1>Heading</h1><p>Dis is text</p>');
-    res.write(text);
+    res.write(data);
    	// res.write('{"title" : "Hello JSON web API", "text" : "Text fra min API"}');
    	res.end();
 });
