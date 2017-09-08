@@ -2,6 +2,7 @@ var http = require('http');
 
 // Set up server using http variable
 var server = http.createServer(function(req, res){ // new function inside createServer function
+   	res.setHeader('Access-Control-Allow-Origin', '*');
    	// First parameter is status code, second parameter is type of content
    	res.writeHead(200, {'Content-type' : 'text/json'}); 
    	// res.write('<h1>Heading</h1><p>Dis is text</p>');
@@ -10,4 +11,4 @@ var server = http.createServer(function(req, res){ // new function inside create
 });
 
 // Listen on port number
-server.listen(process.env.PORT || 3003);
+server.listen(process.env.PORT || 3003); // First parameter = heroku decides the port
