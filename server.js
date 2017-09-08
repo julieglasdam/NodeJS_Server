@@ -8,7 +8,7 @@ var server = http.createServer(function(req, res){ // new function inside create
 
   var fs = require('fs');
   var x;
-  fs.readFile('small.txt', 'utf-8', function (err, data) {
+  fs.readFileSync('small.txt', 'utf-8', function (err, data) {
    x = data;
   });
 
